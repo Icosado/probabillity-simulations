@@ -19,7 +19,7 @@ public class Deck {
     public Deck(Game game) {
         this.tiles = new ArrayList<>();
         this.game = game;
-        this.rng = new Random();
+        this.rng = game.rng;
         randomlyAssort();
     }
 

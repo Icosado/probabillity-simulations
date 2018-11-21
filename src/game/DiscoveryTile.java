@@ -8,4 +8,11 @@ public class DiscoveryTile {
     public boolean isMask() {
         return false;
     }
+    public boolean equals(DiscoveryTile other) {
+        return this.name.equals(other.name);
+    }
+
+    public String toString() {
+        return this.name;
+    }
 }

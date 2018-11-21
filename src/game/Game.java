@@ -1,12 +1,15 @@
 package game;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Game {
     private int discoveryTiles;
     private int masksTotal;
     private int startingSelectionAmount;
     private ArrayList<Mask> uniqueMasks;
+    public Random rng;
+
     public static Game GAME_STANDARD = new Game(54, 19,
             new Mask("1", 3),
             new Mask("2", 3),
@@ -18,6 +21,7 @@ public class Game {
     );
 
     public Game(int discoveryTiles, int startingSelection, Mask... masks) {
+        rng = new Random();
         this.discoveryTiles = discoveryTiles;
         this.startingSelectionAmount = startingSelection;
         uniqueMasks = new ArrayList<>();
